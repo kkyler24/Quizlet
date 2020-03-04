@@ -13,7 +13,6 @@
     <!-- Quiz Design -->
    
 <p class="text-center" style= "font-size: 50px;"><strong>Test</strong></p>
-
 <div class="container">
   <div class="col-8" style= "font-size: 28px;">
   	<p>
@@ -21,11 +20,18 @@
   	</p>
   </div>
   	<div class="col-3">
-  		<p>
-  			<button type="button" class="btn btn-info Correct">Muscles</button><br>
-  			<button type="button" class="btn btn-info Wrong">Coffee</button><br>
-  			<button type="button" class="btn btn-info Wrong">Skin</button>
-  		</p>
+          <!-- design Radio Buttons with R or C classes -->
+        <form>
+            <input type="radio" class="correct" name="anwser" value="Muscles">
+            <label for="Muscles">Muscles</label><br>
+
+            <input type="radio" class="wrong" name="anwser" value="Coffee">
+            <label for="Coffee">Coffee</label><br>
+            
+            <input type="radio" class="wrong" name="anwser" value="Skin">
+            <label for="Skin">Skin</label>
+        </form>
+
   	</div>
 
  <div class="col-8" style= "font-size: 28px;">
@@ -33,13 +39,19 @@
   		Question 2: What is BootStrap?
   	</p>
   </div>
-  	<div class="col-3">
-  		<p>
-  			<button type="button" class="btn btn-info Wrong">A piece of material that helps hold up your boot</button><br>
-  			<button type="button" class="btn btn-info Correct">An open source Css framework</button><br>
-  			<button type="button" class="btn btn-info Wrong">An open source JS framework</button>
-  		</p>
+  	<div class="col-6">
+  		<Form>
+           <input type="radio" class="wrong" name="anwser" value="material">
+           <label for="material"> A piece of material that helps hold up your boot</label><br>
+            
+            <input type="radio" class="correct" name="anwser" value="framework">
+            <label for="framework">An open source Css framework</label><br>
+
+            <input type="radio" class="wrong" name="anwser" value="JSFramekwork">
+            <label for="JSFramekwork">An open source JS framework</label>
+        </Form>
   	</div>
+
 
   	 <div class="col-8" style= "font-size: 28px;">
   	<p>
@@ -47,11 +59,16 @@
   	</p>
   </div>
   	<div class="col-3">
-  		<p>
-  			<button type="button" class="btn btn-info Correct">Answer 1</button><br>
-  			<button type="button" class="btn btn-info Wrong">Answer 2</button><br>
-  			<button type="button" class="btn btn-info Wrong">Answer 3</button>
-  		</p>
+        <Form>
+            <input type="radio" class="wrong" name="anwser" value="material">
+            <label for="material"> A piece of material that helps hold up your boot</label><br>
+             
+             <input type="radio" class="correct" name="anwser" value="framework">
+             <label for="framework">An open source Css framework</label><br>
+ 
+             <input type="radio" class="wrong" name="anwser" value="JSFramekwork">
+             <label for="JSFramekwork">An open source JS framework</label>
+         </Form>
   	</div>
 
 
@@ -61,16 +78,34 @@
   	</p>
   </div>
   	<div class="col-3">
-  		<p>
-  			<button type="button" class="btn btn-info Correct">Answer 1</button><br>
-  			<button type="button" class="btn btn-info Wrong">Answer 2</button><br>
-  			<button type="button" class="btn btn-info Wrong">Answer 3</button>
-  		</p>
+        <Form>
+            <input type="radio" class="wrong" name="anwser" value="material">
+            <label for="material"> A piece of material that helps hold up your boot</label><br>
+             
+             <input type="radio" class="correct" name="anwser" value="framework">
+             <label for="framework">An open source Css framework</label><br>
+ 
+             <input type="radio" class="wrong" name="anwser" value="JSFramekwork">
+             <label for="JSFramekwork">An open source JS framework</label>
+         </Form>
   	</div>
   	
 </div>
 <script>
-    
+    // Event listerner-check if corect button is true, change page add or subtract points.
+generateBtn.addEventListener("click",function(event){
+
+if (numBox.checked === false && symbox.checked === false && upperBox.checked === false &&   charbox.checked === false){
+        alert("Please select your criteria");
+    }
+    else {
+    var pwLength = prompt("input a number length here");
+
+    var possiblePasswordCharacters = '';
+    if (numBox.checked === true ){
+    possiblePasswordCharacters = possiblePasswordCharacters + num; 
+    } 
+
 </script>
 <link rel="JS" href="DevOpsFiles/Java.js">
 </body>
