@@ -9,13 +9,10 @@ $( document).load(function() {
     }
   });
 
-// decrease Timer
-
-
   }
 document.getElementsByClassName()
 
-
+// give each button a class of either correct or wrong or just give the correct buttons a class and check if those are clicked
 // get class name of an element-
 // chcek the class to apply the correct function to it
 // function 1 pointCheck-if class is correct push 25pts into total array, else subtract 15seconds from timer* 
