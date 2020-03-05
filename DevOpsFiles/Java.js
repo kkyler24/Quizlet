@@ -15,12 +15,13 @@ $( document).load(function() {
   }
 document.getElementsByClassName()
 
-// Timer Div
 
-// how to chcek the class to apply the correct function to it
-// how to get class name of an element- get the class name
-// for each input field see if they class name is correct or not. 
-// if the class  name is corerct do this else do this. 
+// get class name of an element-
+// chcek the class to apply the correct function to it
+// function 1 pointCheck-if class is correct push 25pts into total array, else subtract 15seconds from timer* 
+// function 2 reloadContent- check if button is clicked if true clear and reload next content
+// function 3 timerTrack-  decrease timer every 1 second. display total time left, if timer reached less than 1 end quiz.  Start countdown timer on document load, 
+// Display final score with initials
 
 {/* //  Event listerner-check if correct button is true, change page add or subtract points.
   // generateBtn.addEventListener("click",function(event)){ */}
