@@ -12,10 +12,19 @@ $( document).load(function() {
   }
 
   // --Check if correct button is clicked--
-document.getElementsByClassName("correct");
-generateBtn.addEventListener("click",function(event)){
+var questionsContainer = document.getElementsByClassName("qD");
+for (var i = 0 , max = questionsContainer.length; i < max; i++ ){
+ 
+  questionsContainer[i].addEventListener("click", function());
+}
+ Function answerCheck(e)
+  if ()
   
-   }
+  
+  // $("q1").click(function(){
+  //   $(this).hide();
+
+  
 
 // give each button a class of either correct or wrong or just give the correct buttons a class (done)
 //  check if those are clicked
