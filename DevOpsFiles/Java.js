@@ -10,9 +10,15 @@ $( document).load(function() {
   });
 
   }
-document.getElementsByClassName()
 
-// give each button a class of either correct or wrong or just give the correct buttons a class and check if those are clicked
+  // --Check if correct button is clicked--
+document.getElementsByClassName("correct");
+generateBtn.addEventListener("click",function(event)){
+  
+   }
+
+// give each button a class of either correct or wrong or just give the correct buttons a class (done)
+//  check if those are clicked
 // get class name of an element-
 // chcek the class to apply the correct function to it
 // function 1 pointCheck-if class is correct push 25pts into total array, else subtract 15seconds from timer* 
@@ -21,7 +27,7 @@ document.getElementsByClassName()
 // Display final score with initials
 
 {/* //  Event listerner-check if correct button is true, change page add or subtract points.
-  // generateBtn.addEventListener("click",function(event)){ */}
+  // 
   
   // if (numBox.checked === false && symbox.checked === false && upperBox.checked === false &&   charbox.checked === false){
   //         alert("Please select your criteria");
