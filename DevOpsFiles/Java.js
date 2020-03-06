@@ -10,7 +10,7 @@ $( ".answer" ).bind("click", function() {
 evaluateQuestion(question[currentQuestion]);
 
  // --Timer--
-$( document).load(function() {
+$(document).load(function() {
   function decreaseTime() {
      secLeft = secLeft -1;
     if (secLeft < 1 ){
@@ -18,13 +18,10 @@ $( document).load(function() {
     }
   })
   }
-
   // --Check if correct button is clicked--
   // store questions and answers
   
   // we need to know which one is correc
- var currentQuestion = 0;
- question = question.length;
 // auto fill questions?
 
 }
@@ -91,7 +88,42 @@ $( document).load(function() {
   }
 },  
   ]
-  
+  // displaying next question fill in content? how to fill content into buttons, should you use just <P> instead?
+  function nextQ() {
+    var q=questions[question], ids = ["A","B","C"],
+    a = document.getElementById("A"),
+    b = document.getElementById("B"),
+    c = document.getElementById("C"),
+    answers = q.answers;
+    document.getElementById("Questions").innerHTML=q.Q;
+    for (var i=0;i<ids.length;i++) {
+      var id=ids[i],p = document.getElementById(id);
+      p.title=answers[id].title;
+      p.innerHTML=answers[id].text;
+    }
+  }
+  window.onload = function() {
+    var answers = document.querySelectorAll(".answer");
+    var q = questions[question]
+    for (var i = 0; i < answers.length; i++) {
+      answers[i].addEventListener("click", function() {
+        var act = questions[question].answers[this.id];
+        score = totalScore;
+        // document.getElementById("score").innerHTML =  + score;
+        
+        setTimeout(nextQ,2000)
+      });
+    }
+    nextQ(); // first question?
+  }
+
+
+
+
+
+
+
+
 // Setting question to auto fll in text area. 
   function setQuestion(question) {
     // set title
@@ -105,7 +137,7 @@ $( document).load(function() {
   
     // set correct answer
     $(".Answer").each(function(){
-      if (this.text() === question0.correctAnswer){
+      if (this.text() === question[0].correctAnswer){
         $(this).addClass("correct");
       }
     });
@@ -114,20 +146,13 @@ $( document).load(function() {
   function evaluateQuestion(question){
     //tally score-- how will you calculate total score and check is correct answer is chosen.
       //check answer
-        if (clicked buttons innerText === question[0].correctAnswer) {
+        if (clicked === question[0].Q.answers.correctAnswer){
           totalScore.push(25);
         }
         else (secLeft-15);
   }
- 
-      if (currentQuestion > questions.length()){
-        currentQusetion++;
-        setQuestion(question[currentQuestion]);
-      } else {
-        //show scoreboard
-       
-      }
-  });
+  
+
   
     
   // give each button a class of either correct or wrong or just give the correct buttons a class (done)

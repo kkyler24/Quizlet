@@ -4,10 +4,10 @@ body{
   }
 }
 
-#score {
+#secLeft {
   position: absolute;
   top: 0.1%;
-  left: 42%;
+  
 }
 
 #A {
