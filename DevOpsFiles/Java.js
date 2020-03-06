@@ -2,7 +2,7 @@ var secLeft = 1800;
 var countDown = setInterval(decreaseTime, 1000);
 var totalScore = [];
 // load question when doc laods on webpage--
-document.onload(setQuestion())
+
   .answer.eventhandler(changeQuestion());
 
 //attach event handler to check next question and change to next one
@@ -19,16 +19,10 @@ $( document).load(function() {
   })
   }
 
-  
-    // --Check if correct button is clicked--
+  // --Check if correct button is clicked--
   // store questions and answers
   
-  // we need to know which one is correct
-  question[4]
-  
-   
-  .question[currentQuestion].title;
-     
+  // we need to know which one is correc
  var currentQuestion = 0;
  question = question.length;
 // auto fill questions?
@@ -37,27 +31,68 @@ $( document).load(function() {
      
   var question = [
     {
-      tite: "What is BootStrap?",
-      Answers: ["A piece of material that helps hold up your boot","An open source Css framework","An open source JS framework"],
-      correctAnswer: "A piece of material that helps hold up your boot"
+  "Q": "What is BootStrap?",
+  "answers": {
+    "A": {
+      "title": "A piece of material that helps hold up your boot"
     },
-     {
-      tite:"HTML is to Skeleton as Javascript is to...?",
-      Answers: ["Muscles", "Skin", "Coffee"],
-      correctAnswer: "Skin"
+    "B": {
+      "title": "An open source Css framework"
     },
-     {
-      tite: "What is BootStrap?",
-      Answers: ["A piece of material that helps hold up your boot","An open source Css framework","An open source JS framework"],
-      correctAnswer: "A piece of material that helps hold up your boot"
+    "C": {
+      "title": "An open source JS framework"
     },
-     {
-      tite: "What is BootStrap?",
-      Answers: ["A piece of material that helps hold up your boot","An open source Css framework","An open source JS framework"],
-      correctAnswer: "A piece of material that helps hold up your boot"
+  "correctAnswer": "A piece of material that helps hold up your boot"
+  }
+},
+{
+  "Q": "HTML is to Skeleton as Javascript is to...?",
+  "answers": {
+    "A": {
+      "title": "Muscles"
     },
+    "B": {
+      "title": "Skin"
+    },
+    "C": {
+      "title": "Coffee"
+    },
+  "correctAnswer": "Skin"
+  }
+},     
+{
+  "Q": "HTML is to Skeleton as Javascript is to...?",
+  "answers": {
+    "A": {
+      "title": "Muscles"
+    },
+    "B": {
+      "title": "Skin"
+    },
+    "C": {
+      "title": "Coffee"
+    },
+  "correctAnswer": "Skin"
+  }
+},  
+{
+  "Q": "HTML is to Skeleton as Javascript is to...?",
+  "answers": {
+    "A": {
+      "title": "Muscles"
+    },
+    "B": {
+      "title": "Skin"
+    },
+    "C": {
+      "title": "Coffee"
+    },
+  "correctAnswer": "Skin"
+  }
+},  
   ]
   
+// Setting question to auto fll in text area. 
   function setQuestion(question) {
     // set title
     $(".title").text(question.title);
@@ -92,30 +127,11 @@ $( document).load(function() {
         //show scoreboard
        
       }
-   
   });
   
-  
-  
-   
-  
-   
-  
-    // $("q1").click(function(){
-  
-    //   $(this).hide();
-  
-  
-  
-  
+    
   // give each button a class of either correct or wrong or just give the correct buttons a class (done)
-  
-
-  
   // chcek the class to apply the correct function to it
-  
   // function 1 pointCheck-if class is correct push 25pts into total array, else subtract 15seconds from timer*
-  
-  
   // Display final score with initials
   

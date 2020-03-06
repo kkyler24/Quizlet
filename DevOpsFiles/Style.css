@@ -2,3 +2,34 @@ body{
     margin: auto;
     text-align: center;
   }
+}
+
+#score {
+  position: absolute;
+  top: 0.1%;
+  left: 42%;
+}
+
+#A {
+  position: absolute;
+  top: 72%;
+  left: 12%;
+}
+
+#B {
+  position: absolute;
+  top: 75%;
+  left: 12%;
+}
+
+#C {
+  position: absolute;
+  top: 78%;
+  left: 12%;
+}
+
+#D {
+  position: absolute;
+  top: 81%;
+  left: 12%;
+}
