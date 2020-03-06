@@ -1,6 +1,13 @@
 var secLeft = 1800;
 var countDown = setInterval(decreaseTime, 1000);
 var totalScore = [];
+// load question when doc laods on webpage--
+document.onload(setQuestion())
+  .answer.eventhandler(changeQuestion());
+
+//attach event handler to check next question and change to next one
+$( ".answer" ).bind("click", function() {
+evaluateQuestion(question[currentQuestion]);
 
  // --Timer--
 $( document).load(function() {
@@ -19,17 +26,14 @@ $( document).load(function() {
   // we need to know which one is correct
   question[4]
   
-  var question = [
-  "HTML is to Skeleton as Javascript is to...?",
-  "Muscles",
-  "Coffee",
-  "Skin",
-   "Muscles"
-   ];
    
-   question[currentQuestion].title;
+  .question[currentQuestion].title;
      
  var currentQuestion = 0;
+ question = question.length;
+// auto fill questions?
+
+}
      
   var question = [
     {
@@ -38,9 +42,9 @@ $( document).load(function() {
       correctAnswer: "A piece of material that helps hold up your boot"
     },
      {
-      tite: "What is BootStrap?",
-      Answers: ["A piece of material that helps hold up your boot","An open source Css framework","An open source JS framework"],
-      correctAnswer: "A piece of material that helps hold up your boot"
+      tite:"HTML is to Skeleton as Javascript is to...?",
+      Answers: ["Muscles", "Skin", "Coffee"],
+      correctAnswer: "Skin"
     },
      {
       tite: "What is BootStrap?",
@@ -75,21 +79,12 @@ $( document).load(function() {
   function evaluateQuestion(question){
     //tally score-- how will you calculate total score and check is correct answer is chosen.
       //check answer
-        if (correct) {
-
+        if (clicked buttons innerText === question[0].correctAnswer) {
+          totalScore.push(25);
         }
-        else if ();
+        else (secLeft-15);
   }
-  // load question when doc laods on webpage--
-      onload(setQuestion())
-  
-      .answer.eventhandler(changeQuestion());
-
-     
-      //attach event handler to check next question and change to next one
-      $( ".answer" ).bind("click", function() {
-    evaluateQuestion(question[currentQuestion]);
-   
+ 
       if (currentQuestion > questions.length()){
         currentQusetion++;
         setQuestion(question[currentQuestion]);
@@ -115,33 +110,12 @@ $( document).load(function() {
   
   // give each button a class of either correct or wrong or just give the correct buttons a class (done)
   
-  //  check if those are clicked
-  
-  // get class name of an element-
+
   
   // chcek the class to apply the correct function to it
   
   // function 1 pointCheck-if class is correct push 25pts into total array, else subtract 15seconds from timer*
   
-  // function 2 reloadContent- check if button is clicked if true clear and reload next content
-  
-  // function 3 timerTrack-  decrease timer every 1 second. display total time left, if timer reached less than 1 end quiz.  Start countdown timer on document load,
   
   // Display final score with initials
   
-  
-  
-  {/* //  Event listerner-check if correct button is true, change page add or subtract points.
-  
-    //
-  
-   
-  
-    // if (numBox.checked === false && symbox.checked === false && upperBox.checked === false &&   charbox.checked === false){
-  
-  
-    //     if (numBox.checked === true ){
-  
-    //     possiblePasswordCharacters = possiblePasswordCharacters + num;
-  
-    //     } 
