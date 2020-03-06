@@ -1,5 +1,6 @@
 var secLeft = 1800;
 var countDown = setInterval(decreaseTime, 1000);
+var totalScore = [;]
 
 $( document).load(function() {
   function decreaseTime() {
@@ -12,14 +13,18 @@ $( document).load(function() {
   }
 
   // --Check if correct button is clicked--
-var questionsContainer = document.getElementsByClassName("qD");
-for (var i = 0 , max = questionsContainer.length; i < max; i++ ){
+var questionsContainer = document.getElementsByClassName("correct");
+  for(var i=0, max = questionsContainer.length; i< max; i++){
+    questionsContainer[i].addEventListener("click", function(Event));
+
+  }
+Function answerCheck(
+  if ("correct"=== true)
+  totalScore.push
+)
+
  
-  questionsContainer[i].addEventListener("click", function());
-}
- Function answerCheck(e)
-  if ()
-  
+ 
   
   // $("q1").click(function(){
   //   $(this).hide();
