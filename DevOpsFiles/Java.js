@@ -2,14 +2,6 @@ var secLeft = 1800;
 var countDown = setInterval(decreaseTime, 1000);
 var totalScore = [];
 // load question when doc laods on webpage--
-
-  .answer.eventhandler(changeQuestion());
-
-//attach event handler to check next question and change to next one
-$( ".answer" ).bind("click", function() {
-evaluateQuestion(question[currentQuestion]);
-
- // --Timer--
 $(document).load(function() {
   function decreaseTime() {
      secLeft = secLeft -1;
@@ -18,18 +10,26 @@ $(document).load(function() {
     }
   })
   }
+  .answers.eventhandler(changeQuestion());
+
+//attach event handler to check next question and change to next one
+$( ".answers" ).bind("click", function() {
+evaluateQuestion(question[currentQuestion]);
+
+ // --Timer--
+
   // --Check if correct button is clicked--
   // store questions and answers
   
   // we need to know which one is correc
 // auto fill questions?
 
-}
+}question[0].answers[0].title
      
   var question = [
     {
   "Q": "What is BootStrap?",
-  "answers": {
+  "answers": [{
     "A": {
       "title": "A piece of material that helps hold up your boot"
     },
@@ -40,7 +40,7 @@ $(document).load(function() {
       "title": "An open source JS framework"
     },
   "correctAnswer": "A piece of material that helps hold up your boot"
-  }
+  }]
 },
 {
   "Q": "HTML is to Skeleton as Javascript is to...?",
@@ -102,6 +102,11 @@ $(document).load(function() {
       p.innerHTML=answers[id].text;
     }
   }
+
+
+
+
+  // onload
   window.onload = function() {
     var answers = document.querySelectorAll(".answer");
     var q = questions[question]
