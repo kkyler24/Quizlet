@@ -1,59 +1,73 @@
-// var secLeft = 1800;
-// var countDown = setInterval(decreaseTime, 1000);
-// var totalScore = [];
-// // load question when doc laods on webpage--
-// $(document).load(function() {
-//   function decreaseTime() {
-//      secLeft = secLeft -1;
-//     if (secLeft < 1 ){
-//       clearInterval(secLeft);
-//     }
-//   })
-//   }
-// .answers.eventhandler(changeQuestion());
+// Timer function stuff
+function getFormattedMinutes() {
+  var secondsLeft = totalSeconds - secondsElapsed;
+  var minutesLeft = Math.floor(secondsLeft / 60);
+  var formattedMinutes; {
+    formattedMinutes = "0" + minutesLeft;
+  }
+  return formattedMinutes;
+}
+function getFormattedSeconds() {
+  var secondsLeft = (totalSeconds - secondsElapsed) % 60;
+  var formattedSeconds;
+  if (secondsLeft < 10) {
+    formattedSeconds = "0" + secondsLeft;
+  } else {
+    formattedSeconds = secondsLeft;
+  }
+  return formattedSeconds;
+}
+function renderTime() {
+  timerText.textContent = "Time Remaining: " + getFormattedMinutes() + " : " + getFormattedSeconds();
+  if (secondsElapsed >= totalSeconds) {
+    clearInterval(timer);
+    alert("Time is up!");
+    answeredQ5();
+  }
+}
+function stopTimer() {
+  secondsElapsed = 0;
+  renderTime();
+}
+function startTimer() {
+  if (totalSeconds > 0) {
+    secondsElapsed = 0;
+    timer = setInterval(function () {
+      secondsElapsed++;
+      renderTime();
+    }, 1000);
+  }
+  renderTime();
+}
+// Global variables stuff
+a = document.getElementById("A"),
+b = document.getElementById("B"),
+c = document.getElementById("C"),
+answers = q.answers;
 
-//attach event handler to check next question and change to next one
-$(".answers").bind("click", function () {
-  evaluateQuestion(question[currentQuestion]);
-
-  // --Timer--
-
-  // --Check if correct button is clicked--
-  // store questions and answers
-
-  // we need to know which one is correc
-  // auto fill questions?
-
-})
 // question[0].answers.correct
 
-
-var question = [
-  {
+// Fill question on call. 
+$("#A").textContent = question.Q1.answersArray[0];
+// do this for each answer for Q1
+// then 
+var question =
+{
+  Q1: {
+    Question: "What is BootStrap?",
     answersArray: ["A piece of material that helps hold up your boot", "An open source Css framework", "An open source JS framework"],
     correctIndex: 1,
-    "Q": "What is BootStrap?",
+  }
 
-    "answers": {
-      "A": {
-        "title": "A piece of material that helps hold up your boot"
-      },
-      "B": {
-        "title": "An open source Css framework"
-      },
-      "C": {
-        "title": "An open source JS framework"
-      },
-      "correctAnswer": "A piece of material that helps hold up your boot"
-    }
-  },
+
+},
   {
-    "Q": "HTML is to Skeleton as Javascript is to...?",
+    "Q2": "HTML is to Skeleton as Javascript is to...?",
     "answers": {
-      "A": {
+      A: {
         "title": "Muscles"
       },
-      "B": {
+      B: {
         "title": "Skin"
       },
       "C": {
@@ -92,21 +106,18 @@ var question = [
       "correctAnswer": "Skin"
     }
   },
-]
-console.log(question);
+
+  console.log(question);
 //
 //  displaying next question fill in content? how to fill content into buttons, should you use just <P> instead?
 function nextQ() {
   var q = questions[question], ids = ["A", "B", "C"],
-    a = document.getElementById("A"),
-    b = document.getElementById("B"),
-    c = document.getElementById("C"),
-    answers = q.answers;
-  document.getElementById("Questions").innerHTML = q.Q;
-  for (var i = 0; i < ids.length; i++) {
-    var id = ids[i], p = document.getElementById(id);
-    p.title = answers[id].title;
-    p.innerHTML = answers[id].text;
+
+    document.getElementById("Questions").innerHTML = q.Q;
+  // for (var i = 0; i < ids.length; i++) {
+  //   var id = ids[i], p = document.getElementById(id);
+  //   p.title = answers[id].title;
+  //   p.innerHTML = answers[id].text;
   }
 }
 
@@ -125,30 +136,14 @@ window.onload = function () {
   answerArrayTwo.forEach(function (answeroption) {
     //create button with answer option inside.
     // append it to answers contaniner, 
-   var answerButton =  $("<button>").text(answeroption);
-   $("#answerBox").append(answerButton);
+    var answerButton = $("<button>").text(answeroption);
+    $("#answerBox").append(answerButton);
     console.log(answeroption);
-  }) 
+  })
 
-  // selects alll elements with class answers
-  //     var answers = document.querySelectorAll(".answers");
-  // console.log("windowloaded");
-  //     var q = questions[question]
-  //     // for everybutton that has answers class 
-  //     for (var i = 0; i < answers.length; i++) {
-  //       // attaching event listerner to each button
-  //       answers[i].addEventListener("click", function() {
-
-  //         var act = questions[question].answers[this.id];
-  //         score = totalScore;
-  //         // document.getElementById("score").innerHTML =  + score;
-
-  //         setTimeout(nextQ,2000)
-  //       });
-  //     }
-  //     nextQ(); // first question?
-}
-
+  //$("answers").click(function){
+    
+  }
 
 
 
@@ -168,7 +163,7 @@ function setQuestion(question) {
   }
 
   // set correct answer
-  $(".Answer").each(function () {
+  $(".Answer").click(function () {
     if (this.text() === question[0].correctAnswer) {
       $(this).addClass("correct");
     }
