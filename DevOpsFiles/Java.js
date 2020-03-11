@@ -48,65 +48,45 @@ answers = q.answers;
 // question[0].answers.correct
 
 // Fill question on call. 
-$("#A").textContent = question.Q1.answersArray[0];
+$("#A").textContent = question.Q1.answers1;
 // do this for each answer for Q1
 // then 
-var question =
+
+// Questions Object
+var Questions =
 {
   Q1: {
     Question: "What is BootStrap?",
-    answersArray: ["A piece of material that helps hold up your boot", "An open source Css framework", "An open source JS framework"],
-    correctIndex: 1,
+    answers1: "A piece of material that helps hold up your boot", 
+    answers1Correct:"An open source Css framework",
+    answers1:"An open source JS framework"
+      },
+
+  Q2: {
+      Question: "HTML is to Skeleton as Javascript is to...?",
+      answers2: "Muscles",
+      answers2Correct:"Skin",
+      answers2:"Coffee"
+    },
+
+  Q3: {
+      Question: "HTML is to Skeleton as Javascript is to...?",
+      answers3: "Muscles",
+      answers3:"Coffee",
+      answers3Correct:"Skin",
+    },
+    
+  Q4: {
+      Question: "HTML is to Skeleton as Javascript is to...?",
+      answers4Correct: "Muscles",
+      answers4:"Coffee",
+      answers4:"Skin",
   }
-
-
-},
-  {
-    "Q2": "HTML is to Skeleton as Javascript is to...?",
-    "answers": {
-      A: {
-        "title": "Muscles"
-      },
-      B: {
-        "title": "Skin"
-      },
-      "C": {
-        "title": "Coffee"
-      },
-      "correctAnswer": "Skin"
-    }
-  },
-  {
-    "Q": "HTML is to Skeleton as Javascript is to...?",
-    "answers": {
-      "A": {
-        "title": "Muscles"
-      },
-      "B": {
-        "title": "Skin"
-      },
-      "C": {
-        "title": "Coffee"
-      },
-      "correctAnswer": "Skin"
-    }
-  },
-  {
-    "Q": "HTML is to Skeleton as Javascript is to...?",
-    "answers": {
-      "A": {
-        "title": "Muscles"
-      },
-      "B": {
-        "title": "Skin"
-      },
-      "C": {
-        "title": "Coffee"
-      },
-      "correctAnswer": "Skin"
-    }
-  },
-
+};
+ 
+ 
+  
+  
   console.log(question);
 //
 //  displaying next question fill in content? how to fill content into buttons, should you use just <P> instead?
