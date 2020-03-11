@@ -14,7 +14,7 @@ body{
   position: absolute;
   top: 72%;
   left: 12%;
-  display: inline-block;
+  display: block;
 }
 
 #questionBoxTwo {

@@ -83,13 +83,15 @@ var Quests =[
  
 
 // -->Get faded code<--
+
 $("button").on("click", function(){
-  $("questionBoxOne").fadeout(1000);
+  $("questionBoxOne").fadeOut(1000);
+  setTimeOut(function(){
     $(this).remove();
- 
-    setTimeout(1500);
+  }, 1500);
+})
     
-    for (var i = 0; i < ids.length; i++) {
+    // for (var i = 0; i < ids.length; i++) {
 
 
 
