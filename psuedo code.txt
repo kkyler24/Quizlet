@@ -1,0 +1,8 @@
+first create the rows for for questions
+    give div tags to boxes and rows, classes
+then fill in the rows with buttons for answers assign which one is the correct answer. 
+add fade function or slide up function once a button with in that id is pressed them remove that ID div
+    once the button is pressed it will check if it had a class of correct it it does it will add 25pts to total score, if not it will add 150 to timer. 
+
+wait 1 second then slide down ID#2 div with questions
+    repeat process. 

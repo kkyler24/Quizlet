@@ -2,34 +2,38 @@ body{
     margin: auto;
     text-align: center;
   }
-}
+
 
 #secLeft {
   position: absolute;
   top: 0.1%;
-  
+  display: block;
 }
 
-#A {
+#questionBoxOne {
   position: absolute;
   top: 72%;
   left: 12%;
+  display: inline-block;
 }
 
-#B {
+#questionBoxTwo {
   position: absolute;
   top: 75%;
   left: 12%;
+  display: none;
 }
 
-#C {
+#questionBoxThree {
   position: absolute;
   top: 78%;
   left: 12%;
+  display: none;
 }
 
-#D {
+#questionBoxFour {
   position: absolute;
   top: 81%;
   left: 12%;
+  display: none;
 }
