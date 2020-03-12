@@ -5,18 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- JQ -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <!-- Popper -->
+<!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!-- JQ -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="DevOpsFiles/Java.js"></script>
+<!-- Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <!-- MyCSS -->
-    <link rel="stylesheet" type="text/style" href="DevOpsFiles/Style.css">
-    <script src="DevOpsFiles/Java.js"></script>
+<!-- Myfiles -->
+    <link rel="stylesheet" type="text/css" href="DevOpsFiles/Style.css">
     <title>Quiz it</title>
 </head>
 
@@ -27,92 +26,99 @@
 <body nload="startTime()" class="displayTime">
     <div id="myTime"> </div>
 
-    <div id="questionBoxOne" class="row">
-        <div id="Question" class="col-md-6 col-sm-3 questionB">
-            "What is BootStrap?"
-            <div class="row">
-
-                <div class="col-8 col-sm-6 answer">
-                    <button id="B" type="button" class="btn btn-info">"A piece of material that helps hold up your boot"
-                    </button>
-
-                    <div class="col-8 col-sm-6 answer">
-                        <button id="C" type="button" class="btn btn-info">"An open source Css framework"</button>
-
-                        <div class="col-8 col-sm-6 answer">
-                            <button id="D" type="button" class="btn btn-info">"An open source Js framework"</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-
-
-        <div id="questionBoxTwo" class="row display: none">
-            <div id="Question" class="col-md-6 col-sm-3 questionB">
+    <Div class="flex-container">
+        <div id="questionBoxOne" class="row" style="display: block;">
+            <div id="questionA" class="col-md-6 col-sm-3 questionDiv">
                 "What is BootStrap?"
                 <div class="row">
 
                     <div class="col-8 col-sm-6 answer">
-                        <button id="B" type="button" class="btn btn-info">"A piece of material that helps hold up your
-                            boot" </button>
+                        <button id="B" type="button" class="button">"A piece of material that helps hold up your
+                            boot"
+                        </button>
 
                         <div class="col-8 col-sm-6 answer">
-                            <button id="C" type="button" class="btn btn-info">"An open source Css framework"</button>
+                            <button id="C" type="button" class="button correct">"An open source Css
+                                framework"</button>
 
                             <div class="col-8 col-sm-6 answer">
-                                <button id="D" type="button" class="btn btn-info">"An open source Js framework"</button>
+                                <button id="D" type="button" class="button">"An open source Js framework"</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="questionBoxThree" class="row">
-                <div id="Question" class="col-md-6 col-sm-3 questionB">
-                    "What is BootStrap?"
-                    <div class="row">
+
+        <div id="questionBoxTwo" class="row" style="display: none;">
+            <div id="questionB" class="col-md-6 col-sm-3 questionDiv">
+                "What is BootStrap?"
+                <div class="row">
+
+                    <div class="col-8 col-sm-6 answer">
+                        <button id="B" type="button" class="button">"A piece of material that helps hold up your
+                            boot" </button>
 
                         <div class="col-8 col-sm-6 answer">
-                            <button id="B" type="button" class="btn btn-info">"A piece of material that helps hold up
-                                your boot" </button>
+                            <button id="C" type="button" class="button">"An open source Css framework"</button>
 
                             <div class="col-8 col-sm-6 answer">
-                                <button id="C" type="button" class="btn btn-info">"An open source Css
+                                <button id="D" type="button" class="button correct">"An open source Js
                                     framework"</button>
-
-                                <div class="col-8 col-sm-6 answer">
-                                    <button id="D" type="button" class="btn btn-info">"An open source Js
-                                        framework"</button>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <div id="questionBoxThree" class="row" style="display: none;">
+            <div id="questionC" class="col-md-6 col-sm-3 questionDiv">
+                "What is BootStrap?"
+                <div class="row">
 
-                <div id="questionBoxFour" class="row">
-                    <div id="Question" class="col-md-6 col-sm-3 questionB">
-                        "What is BootStrap?"
-                        <div class="row">
+                    <div class="col-8 col-sm-6 answer">
+                        <button id="B" type="button" class="button">"A piece of material that helps hold up
+                            your boot" </button>
 
-                            <div class="col-8 col-sm-6 answer">
-                                <button id="B" type="button" class="btn btn-info">"A piece of material that helps hold
-                                    up your boot" </button>
+                        <div class="col-8 col-sm-6 answer">
+                            <button id="C" type="button" class="button correct"> "An open source Css
+                                framework"</button>
 
                                 <div class="col-8 col-sm-6 answer">
-                                    <button id="C" type="button" class="btn btn-info">"An open source Css
+                                    <button id="D" type="button" class="button">"An open source Js
                                         framework"</button>
-
-                                    <div class="col-8 col-sm-6 answer">
-                                        <button id="D" type="button" class="btn btn-info">"An open source Js
-                                            framework"</button>
-                                    </div>
                                 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="questionBoxFour" class="row" style="display: none;">
+            <div id="questionD" class="col-md-6 col-sm-3 questionDiv">
+                "What is BootStrap?"
+                <div class="row">
+
+                    <div class="col-8 col-sm-6 answer">
+                        <button id="B" type="button" class="button correct">"A piece of material that helps hold
+                            up your boot" </button>
+
+                        <div class="col-8 col-sm-6 answer">
+                            <button id="C" type="button" class="button">"An open source Css
+                                framework"</button>
+
+                            <div class="col-8 col-sm-6 answer">
+                                <button id="D" type="button" class="button">"An open source Js
+                                    framework"</button>
                             </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+        </div>
+    </Div>
 </body>
 
 </html>
