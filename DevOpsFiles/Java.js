@@ -83,42 +83,29 @@ var Quests =[
  
 
 // -->Get faded code<--
-var removeq1 =  $(this).remove();
+// var removeq1 =  $(this).remove();
 $(".button").on("click", function(){
   $("#questionBoxOne").fadeOut(1000,function(){
     $(this).remove();
-})}
+})})
 
 // $("#questionBoxTwo").fadeIn(1000,function())
  
 // fade in after (this).remove has been completed
-    
+var buttonCheck = document.getElementsByClassName("button"); 
+var totalScore = "";
    
 $(".button").on("click", function(){
   $("#questionBoxTwo").fadeOut(1000,function(){
     $(this).remove();
-})}
+})})
 
-
-
-
-
-
-  // set correct answer
- 
-// function evaluateQuestion(question) {
-//   //tally score-- how will you calculate total score and check is correct answer is chosen.
-//   //check answer
-//   if (clicked === question[0].Q.answers.correctAnswer) {
-//     totalScore.push(25);
-//   }
-//   else (secLeft - 15);
-// }
-
-
-
-
-  // give each button a class of either correct or wrong or just give the correct buttons a class (done)
-  // chcek the class to apply the correct function to it
-  // function 1 pointCheck-if class is correct push 25pts into total array, else subtract 15seconds from timer*
-  // Display final score with initials
+// Check the buttons for correct class
+for ( var i = 0; i > flex-container.lenght; i++) { 
+  $("button").on("click", function(){
+    if (buttonCheck.click === button.correct){
+        totalScore = totalScore + 25;
+    }
+    else {secondsElapsed + 1500};
+  }
+)}
