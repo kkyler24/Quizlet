@@ -84,28 +84,37 @@ var Quests =[
 
 // -->Get faded code<--
 // var removeq1 =  $(this).remove();
-$(".button").on("click", function(){
-  $("#questionBoxOne").fadeOut(1000,function(){
+var fadeOut = $(".button").on("click", function(){
+  $("#questionBoxOne").fadeOut(2000,function(){
     $(this).remove();
-})})
+})}); 
 
+
+ $(".button").click("questionBoxOne", function(){
+  $("#questionBoxTwo").fadeIn(3500,function(){
+})}); 
+
+
+// // $(".button").on("questionBoxTwo click", function(){
+// //   $("#questionBoxTwo").fadeOut(3500,function(){
+// //     $(this).remove();
+// })}); 
 // $("#questionBoxTwo").fadeIn(1000,function())
  
 // fade in after (this).remove has been completed
-var buttonCheck = document.getElementsByClassName("button"); 
-var totalScore = "";
+// var buttonCheck = document.getElementsByClassName("button"); 
+// var totalScore = "";
    
-$(".button").on("click", function(){
-  $("#questionBoxTwo").fadeOut(1000,function(){
-    $(this).remove();
-})})
+// button listener
+
+
 
 // Check the buttons for correct class
-for ( var i = 0; i > flex-container.lenght; i++) { 
-  $("button").on("click", function(){
-    if (buttonCheck.click === button.correct){
-        totalScore = totalScore + 25;
-    }
-    else {secondsElapsed + 1500};
-  }
-)}
+// // for ( var i = 0; i > flex-container.lenght; i++) { 
+// //   $("button").on("click", function(){
+// //     if (buttonCheck.click === button.correct){
+// //         totalScore = totalScore + 25;
+// //     }
+// //     else {secondsElapsed + 1500};
+//   }
+// )}
