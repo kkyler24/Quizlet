@@ -1,47 +1,47 @@
 // Timer function stuff
 // var displayTime = timerText.textContent;
 // document.getElementById("displayTime");
-// window.onload = function () {
-//   function getFormattedMinutes() {
-//     var secondsLeft = totalSeconds - secondsElapsed;
-//     var minutesLeft = Math.floor(secondsLeft / 60);
-//     var formattedMinutes; {
-//       formattedMinutes = "0" + minutesLeft;
-//     }
-//     return formattedMinutes;
-//   }
-//   function getFormattedSeconds() {
-//     var secondsLeft = (totalSeconds - secondsElapsed) % 60;
-//     var formattedSeconds;
-//     if (secondsLeft < 10) {
-//       formattedSeconds = "0" + secondsLeft;
-//     } else {
-//       formattedSeconds = secondsLeft;
-//     }
-//     return formattedSeconds;
-//   }
-//   function formatTime() {
-//     timerText.textContent = "Time Remaining: " + getFormattedMinutes() + " : " + getFormattedSeconds();
-//     if (secondsElapsed >= totalSeconds) {
-//       clearInterval(timer);
-//       alert("Time's Up!");
-//     }
-//   }
-//   function stopTimer() {
-//     secondsElapsed = 0;
-//     formatTime();
-//   }
-//   function startTimer() {
-//     if (totalSeconds > 0) {
-//       secondsElapsed = 0;
-//       timer = setInterval(function () {
-//         secondsElapsed++;
-//         formatTime();
-//       }, 1000);
-//     }
-//     formatTime();
-//   }
-// };
+window.onload = function () {
+  function getFormattedMinutes() {
+    var secondsLeft = totalSeconds - secondsElapsed;
+    var minutesLeft = Math.floor(secondsLeft / 60);
+    var formattedMinutes; {
+      formattedMinutes = "0" + minutesLeft;
+    }
+    return formattedMinutes;
+  }
+  function getFormattedSeconds() {
+    var secondsLeft = (totalSeconds - secondsElapsed) % 60;
+    var formattedSeconds;
+    if (secondsLeft < 10) {
+      formattedSeconds = "0" + secondsLeft;
+    } else {
+      formattedSeconds = secondsLeft;
+    }
+    return formattedSeconds;
+  }
+  function formatTime() {
+    timerText.textContent = "Time Remaining: " + getFormattedMinutes() + " : " + getFormattedSeconds();
+    if (secondsElapsed >= totalSeconds) {
+      clearInterval(timer);
+      alert("Time's Up!");
+    }
+  }
+  function stopTimer() {
+    secondsElapsed = 0;
+    formatTime();
+  }
+  function startTimer() {
+    if (totalSeconds > 0) {
+      secondsElapsed = 0;
+      timer = setInterval(function () {
+        secondsElapsed++;
+        formatTime();
+      }, 1000);
+    }
+    formatTime();
+  }
+};
 
 // ---Score Code---
 var totalScore = [];
@@ -90,11 +90,13 @@ var Quests = [
 var fadeOut = $(".answerA").on("click", function () {
   $("#questionBoxOne").fadeOut(2500, function () {
     $(this).remove();
+    if(answerA.clicked === Quests.Q1.answersCorrect)
   })
 });
 
 $(".button").on("click", function () {
-  $("#questionBoxTwo").fadeIn(3600, function () {
+  $("#questionBoxTwo").fadeIn(3500, function () {
+
   })
 });
 
@@ -105,7 +107,7 @@ $('.answerB').on('click', function () {
 });
 
 $(".answerB").on("click", function () {
-  $("#questionBoxThree").fadeIn(3600, function () {
+  $("#questionBoxThree").fadeIn(3500, function () {
 
   })
 });
@@ -123,24 +125,16 @@ $(".answerC").on("click", function () {
 
 $('.answerD').on('click', function () {
   $("#questionBoxFour").fadeOut(2500, function () {
-    $(this).remove();
+    $(".answerD").addEventListener("click",function(){
+      //   alert("hows it going"); needs to be
+      $(this).remove();
   })
 });
 
 $(".answerD").on("click", function () {
-    $("#stats").slideDown(3500, function () {
-    })
-  });
-// $('.answerD').on('click', function () {
-//   $("#questionBoxFour").fadeOut(2500, function () {
-//     $(".answerD").addEventListener("click",function(){
-//       //   alert("hows it going"); needs to be
-//       $(this).remove();
-//   })
-// });
-
-// 
-// 
+  $("#stats").slideDown(3500, function () {
+  })
+});
 // var aBBox = document.getElementsByClassName("col-8 col-sm-6 answerB");
 // aBBox.
 

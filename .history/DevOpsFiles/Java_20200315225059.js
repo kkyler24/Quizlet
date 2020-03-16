@@ -94,7 +94,7 @@ var fadeOut = $(".answerA").on("click", function () {
 });
 
 $(".button").on("click", function () {
-  $("#questionBoxTwo").fadeIn(3600, function () {
+  $("#questionBoxTwo").fadeIn(3500, function () {
   })
 });
 
@@ -105,32 +105,22 @@ $('.answerB').on('click', function () {
 });
 
 $(".answerB").on("click", function () {
-  $("#questionBoxThree").fadeIn(3600, function () {
+  $("#questionBoxThree").fadeIn(3500, function () {
 
   })
 });
 
-$('.answerC').on('click', function () {
-  $("#questionBoxThree").fadeOut(2500, function () {
-    $(this).remove();
-  })
-});
+// $('.answerC').on('click', function () {
+//   $("#questionBoxThree").fadeOut(2500, function () {
+//     $(this).remove();
+//   })
+// });
 
-$(".answerC").on("click", function () {
-  $("#questionBoxFour").fadeIn(3500, function () {
-  })
-});
+// $(".answerC").on("click", function () {
+//   $("#questionBoxFour").fadeIn(3500, function () {
+//   })
+// });
 
-$('.answerD').on('click', function () {
-  $("#questionBoxFour").fadeOut(2500, function () {
-    $(this).remove();
-  })
-});
-
-$(".answerD").on("click", function () {
-    $("#stats").slideDown(3500, function () {
-    })
-  });
 // $('.answerD').on('click', function () {
 //   $("#questionBoxFour").fadeOut(2500, function () {
 //     $(".answerD").addEventListener("click",function(){
@@ -139,7 +129,10 @@ $(".answerD").on("click", function () {
 //   })
 // });
 
-// 
+// $(".answerD").on("click", function () {
+//   $("#stats").slideDown(3500, function () {
+//   })
+// });
 // 
 // var aBBox = document.getElementsByClassName("col-8 col-sm-6 answerB");
 // aBBox.

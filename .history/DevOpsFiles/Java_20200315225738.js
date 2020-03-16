@@ -121,12 +121,6 @@ $(".answerC").on("click", function () {
   })
 });
 
-$('.answerD').on('click', function () {
-  $("#questionBoxFour").fadeOut(2500, function () {
-    $(this).remove();
-  })
-});
-
 $(".answerD").on("click", function () {
     $("#stats").slideDown(3500, function () {
     })

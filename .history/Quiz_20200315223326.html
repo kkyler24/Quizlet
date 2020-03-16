@@ -22,9 +22,10 @@
 
 <!-- Quiz Design -->
 
-<body class="displayTime">
-    <div><input type="text" readonly="" id="timespent" class="questionDiv" value="0:00"></input> </div>
-
+<body>
+    <p><span id="stats" style="display: none;"></span></p>
+    <div s><input type="text" readonly="" id="timespent" class="questionDiv" value="0:00"></input></div>
+    
     <Div class="flex-container">
         <div id="questionBoxOne" class="row" style="display: block;">
             <div class="col-md-6 col-sm-3 questionDiv">
@@ -48,7 +49,7 @@
             <div class="col-md-6 col-sm-3 questionDiv">
                 "Javascript is to muscles as HTML is to...?"
             </div>
-                <div class="col-8 col-sm-6 answerB correct">
+                <div class="col-8 col-sm-6 answerB">
                     <button type="button" class="button"> IceCream"</button>
                 </div>
                 <div class="col-8 col-sm-6 answerB">
@@ -62,18 +63,20 @@
 
         <div id="questionBoxThree" class="row" style="display: none;">
             <div class="col-md-6 col-sm-3 questionDiv">
-                "What does HTML stand for?"
+                "What is BootStrap?"
                 <div class="row">
 
                     <div class="col-8 col-sm-6 answerC">
-                        <button type="button" class="button">"Home Tools Mark-up language" </button>
+                        <button type="button" class="button">"A piece of material that helps hold up
+                            your boot" </button>
 
                         <div class="col-8 col-sm-6 answerC">
-                            <button type="button" class="button"> "Hyper-text Mark down language "</button>
+                            <button type="button" class="button"> "An open source Css
+                                framework"</button>
 
                             <div class="col-8 col-sm-6 answerC">
-                                <button type="button" class="button">"Hyper-text Mark up language
-                                    "</button>
+                                <button type="button" class="button">"An open source Js
+                                    framework"</button>
                             </div>
                         </div>
                     </div>
@@ -106,7 +109,7 @@
     </Div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="DevOpsFiles/Java.js"></script>
+    <script src="DevOpsFiles/Java.js"></script>   
 </body>
 
 </html>
