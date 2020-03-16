@@ -43,7 +43,7 @@ function myFunction(item) {
   document.getElementById("stats").innerHTML = totalScore.reduce(getSum, 0);
 }
 
-
+// 
 
 // Questions Object
 var Quests = [
@@ -73,6 +73,7 @@ var Quests = [
       answersCorrect: [2]
     }
   }];
+// -->evaluate Q<---
 
 
 // -->Get faded code<--
@@ -90,8 +91,11 @@ $(".startButton").on("click", function () {
 $(".answerA").on("click", function () {
   $("#questionBoxOne").fadeOut(2500, function () {
     $(this).remove();
-  })
+  }) 
 });
+ // if ($("#A1").click() === true){
+  //   totalScore =totalScore + 25;
+  //   else {seconds = seconds-1500}
 
 $(".answerA").on("click", function () {
   $("#questionBoxTwo").fadeIn(3600, function () {
@@ -134,32 +138,12 @@ $(".answerD").on("click", function () {
 
 
 
-
-// done.addEventListener("event", function(){ 
-// $(".answerb").on("event", function(){
-//   $("#questionBoxTwo").fadeOut(2000,function(){
-//     $(this).remove();
-// })}); 
+  // console.log(Quests);
 
 
-
-// 
-// $("#questionBoxTwo").fadeIn(1000,function())
-
-// fade in after (this).remove has been completed
-// var buttonCheck = document.getElementsByClassName("button"); 
-// var totalScore = "";
-
-// button listener
+  // {
+  //   else if ($("#A2").text() === Quest[0].Q1.answersCorrect){
+  //     else($("#A3").text()===Quests[0].Q1.)
 
 
 
-
-// // for ( var i = 0; i > flex-container.lenght; i++) { 
-// //   $("button").on("click", function(){
-// //     if (buttonCheck.click === button.correct){
-// //         totalScore = totalScore + 25;
-// //     }
-// //     else {seconds + 1500};
-//   }
-// )}
