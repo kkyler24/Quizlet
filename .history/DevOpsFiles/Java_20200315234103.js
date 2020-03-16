@@ -1,47 +1,44 @@
+// var startTime;
 
-// record start time
-var startTime;
 function display() {
-    // later record end time
-    var endTime = new Date();
+  // later record end time
+  var endTime = new Date();
 
-    // time difference in ms
-    var timeDiff = endTime - startTime;
+  // time difference in ms
+  var timeDiff = endTime - startTime;
 
-    // strip the miliseconds
-    timeDiff /= 1000;
+  // strip the miliseconds
+  timeDiff /= 1000;
 
-    // get seconds
-    var seconds = Math.floor(timeDiff % 60);
+  // get seconds
+  var seconds = Math.round(timeDiff % 60);
 
-    // remove seconds from the date
-    timeDiff = Math.floor(timeDiff / 60);
+  // remove seconds from the date
+  timeDiff = Math.floor(timeDiff / 60);
 
-    // get minutes
-    var minutes = Math.round(timeDiff % 60);
+  // get minutes
+  var minutes = Math.round(timeDiff % 60);
 
-    // remove minutes from the date
-    timeDiff = Math.floor(timeDiff / 60);
+  // remove minutes from the date
+  timeDiff = Math.floor(timeDiff / 60);
 
-    // get hours
-    var hours = Math.round(timeDiff % 24);
+  // get hours
+  var hours = Math.round(timeDiff % 24);
 
-    // remove hours from the date
-    timeDiff = Math.floor(timeDiff / 24);
+  // remove hours from the date
+  timeDiff = Math.floor(timeDiff / 24);
 
-    // the rest of timeDiff is number of days
-    var days = timeDiff;
+  // the rest of timeDiff is number of days
+  var days = timeDiff;
 
-    $(".time").text(hours + ":" + minutes + ":" + seconds);
-    setTimeout(display, 1000);
+  $(".time").text(minutes + ":" + seconds);
+  setTimeout(display, 1000);
 }
 
-$("#startButton").click(function () {
-    startTime = new Date();
-    setTimeout(display, 1000);
+$("#startbutton").click(function () {
+  startTime = new Date();
+  setTimeout(display, 1000);
 });
-
-
 //   function stopTimer() {
 //     secondsElapsed = 0;
 //     formatTime();
@@ -102,18 +99,13 @@ var Quests = [
 
 // -->Get faded code<--
 
-$("#startButton").on("click", function () {
-  $("#questionBoxOne").fadeIn(3600, function () {
-  })
-});
-
-$(".answerA").on("click", function () {
+var fadeOut = $(".answerA").on("click", function () {
   $("#questionBoxOne").fadeOut(2500, function () {
     $(this).remove();
   })
 });
 
-$(".answerA").on("click", function () {
+$(".button").on("click", function () {
   $("#questionBoxTwo").fadeIn(3600, function () {
   })
 });

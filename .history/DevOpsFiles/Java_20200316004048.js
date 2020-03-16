@@ -36,7 +36,7 @@ function display() {
     setTimeout(display, 1000);
 }
 
-$("#startButton").click(function () {
+$(".answerA").click(function () {
     startTime = new Date();
     setTimeout(display, 1000);
 });
@@ -102,12 +102,7 @@ var Quests = [
 
 // -->Get faded code<--
 
-$("#startButton").on("click", function () {
-  $("#questionBoxOne").fadeIn(3600, function () {
-  })
-});
-
-$(".answerA").on("click", function () {
+var fadeOut = $(".answerA").on("click", function () {
   $("#questionBoxOne").fadeOut(2500, function () {
     $(this).remove();
   })

@@ -1,5 +1,4 @@
 
-// record start time
 var startTime;
 function display() {
     // later record end time
@@ -12,7 +11,7 @@ function display() {
     timeDiff /= 1000;
 
     // get seconds
-    var seconds = Math.floor(timeDiff % 60);
+    var seconds = Math.round(timeDiff % 60);
 
     // remove seconds from the date
     timeDiff = Math.floor(timeDiff / 60);
@@ -32,15 +31,14 @@ function display() {
     // the rest of timeDiff is number of days
     var days = timeDiff;
 
-    $(".time").text(hours + ":" + minutes + ":" + seconds);
+    $(".time").text(minutes + ":" + seconds);
     setTimeout(display, 1000);
 }
 
-$("#startButton").click(function () {
+$(".answerA").click(function () {
     startTime = new Date();
     setTimeout(display, 1000);
 });
-
 
 //   function stopTimer() {
 //     secondsElapsed = 0;
@@ -102,12 +100,7 @@ var Quests = [
 
 // -->Get faded code<--
 
-$("#startButton").on("click", function () {
-  $("#questionBoxOne").fadeIn(3600, function () {
-  })
-});
-
-$(".answerA").on("click", function () {
+var fadeOut = $(".answerA").on("click", function () {
   $("#questionBoxOne").fadeOut(2500, function () {
     $(this).remove();
   })
