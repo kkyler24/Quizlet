@@ -7,20 +7,29 @@ function display() {
 
     // time difference in ms
     var timeDiff = endTime - startTime;
+
+    // strip the miliseconds
     timeDiff /= 1000;
 
     // get seconds
     var seconds = Math.floor(timeDiff % 60);
+
+    // remove seconds from the date
     timeDiff = Math.floor(timeDiff / 60);
 
     // get minutes
     var minutes = Math.round(timeDiff % 60);
+
+    // remove minutes from the date
     timeDiff = Math.floor(timeDiff / 60);
 
     // get hours
     var hours = Math.round(timeDiff % 24);
+
+    // remove hours from the date
     timeDiff = Math.floor(timeDiff / 24);
 
+    // the rest of timeDiff is number of days
     var days = timeDiff;
 
     $(".time").text(hours + ":" + minutes + ":" + seconds);
@@ -31,6 +40,8 @@ $(".startButton").click(function () {
     startTime = new Date();
     setTimeout(display, 1000);
 });
+
+
 
 
 // ---Score Code---

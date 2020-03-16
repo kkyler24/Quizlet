@@ -7,6 +7,8 @@ function display() {
 
     // time difference in ms
     var timeDiff = endTime - startTime;
+
+    // strip the miliseconds
     timeDiff /= 1000;
 
     // get seconds

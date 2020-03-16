@@ -7,20 +7,29 @@ function display() {
 
     // time difference in ms
     var timeDiff = endTime - startTime;
+
+    // strip the miliseconds
     timeDiff /= 1000;
 
     // get seconds
     var seconds = Math.floor(timeDiff % 60);
+
+    // remove seconds from the date
     timeDiff = Math.floor(timeDiff / 60);
 
     // get minutes
     var minutes = Math.round(timeDiff % 60);
+
+    // remove minutes from the date
     timeDiff = Math.floor(timeDiff / 60);
 
     // get hours
     var hours = Math.round(timeDiff % 24);
+
+    // remove hours from the date
     timeDiff = Math.floor(timeDiff / 24);
 
+    // the rest of timeDiff is number of days
     var days = timeDiff;
 
     $(".time").text(hours + ":" + minutes + ":" + seconds);
@@ -32,6 +41,22 @@ $(".startButton").click(function () {
     setTimeout(display, 1000);
 });
 
+
+//   function stopTimer() {
+//     secondsElapsed = 0;
+//     formatTime();
+//   }
+//   function startTimer() {
+//     if (totalSeconds > 0) {
+//       secondsElapsed = 0;
+//       timer = setInterval(function () {
+//         secondsElapsed++;
+//         formatTime();
+//       }, 1000);
+//     }
+//     formatTime();
+//   }
+// };
 
 // ---Score Code---
 var totalScore = [];
@@ -132,7 +157,9 @@ $(".answerD").on("click", function () {
     })
   });
 
-
+// 
+// var aBBox = document.getElementsByClassName("col-8 col-sm-6 answerB");
+// aBBox.
 
 
 // done.addEventListener("event", function(){ 
@@ -154,12 +181,12 @@ $(".answerD").on("click", function () {
 
 
 
-
+// Check the buttons for correct class
 // // for ( var i = 0; i > flex-container.lenght; i++) { 
 // //   $("button").on("click", function(){
 // //     if (buttonCheck.click === button.correct){
 // //         totalScore = totalScore + 25;
 // //     }
-// //     else {seconds + 1500};
+// //     else {secondsElapsed + 1500};
 //   }
 // )}
