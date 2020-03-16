@@ -101,8 +101,8 @@ var Quests = [
 
 
 // -->Get faded code<--
-$(".startButton").on("click", function () {
-  $("#startB").fadeOut(1000, function () {
+$(".button").on("click", function () {
+  $(".startButton").fadeout(1000, function () {
     $(this).remove();
   })
 });
