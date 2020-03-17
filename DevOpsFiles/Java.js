@@ -31,7 +31,7 @@ $(".startButton").click(function () {
 // ---Score Code---
 var totalScore = [];
 function getSum(total, num) {
-  return total + Math(num);
+  return totalScore + Math(num);
 }
 function finalScore(item) {
   document.getElementById("#stats").innerHTML = totalScore.reduce(getSum, 0);
@@ -111,21 +111,20 @@ $('.answerB').on('click', function () {
     $(this).remove();
   })
 });
-$("#A1").on("click", function () {
+
+// --->Question B Evalution code <---
+$("#B1").on("click", function () {
   addTime()
    });
- $("#A2").on("click", function () {
-     totalScore = totalScore + 25;
-     //add score here for tthe right answer
+ $("#B2").on("click", function () {
+  addTime()
       });
- $("#A3").on("click", function () {
-   console.log('Wrong!!')
-   //subtract score 
+ $("#B3").on("click", function () {
+  totalScore = totalScore + 25;
     });
 
 $(".answerB").on("click", function () {
   $("#questionBoxThree").fadeIn(3600, function () {
-
   })
 });
 
@@ -134,6 +133,17 @@ $('.answerC').on('click', function () {
     $(this).remove();
   })
 });
+
+// --->Question C Evalution code <---
+$("#C1").on("click", function () {
+  addTime()
+   });
+ $("#C2").on("click", function () {
+     addTime
+      });
+ $("#C3").on("click", function () {
+  totalScore = totalScore + 25;
+    });
 
 $(".answerC").on("click", function () {
   $("#questionBoxFour").fadeIn(3500, function () {
@@ -145,6 +155,8 @@ $('.answerD').on('click', function () {
     $(this).remove();
   })
 });
+
+// --->Question D Evalution code <---
 
 $(".answerD").on("click", function () {
     $("#stats").slideDown(3500, function () {
