@@ -1,29 +1,24 @@
 
-// record start time
+// --> timer<--
 var startTime;
 function display() {
-    // later record end time
     var endTime = new Date();
 
-    // time difference in ms
     var timeDiff = endTime - startTime;
     timeDiff /= 1000;
-
-    // get seconds
+   
     var seconds = Math.floor(timeDiff % 60);
     timeDiff = Math.floor(timeDiff / 60);
 
-    // get minutes
     var minutes = Math.round(timeDiff % 60);
     timeDiff = Math.floor(timeDiff / 60);
 
-    // get hours
     var hours = Math.round(timeDiff % 24);
     timeDiff = Math.floor(timeDiff / 24);
 
     var days = timeDiff;
 
-    $(".time").text(hours + ":" + minutes + ":" + seconds);
+    $(".time").text(minutes + ":" + seconds);
     setTimeout(display, 1000);
 }
 
@@ -35,12 +30,11 @@ $(".startButton").click(function () {
 
 // ---Score Code---
 var totalScore = [];
-
 function getSum(total, num) {
   return total + Math(num);
 }
-function myFunction(item) {
-  document.getElementById("stats").innerHTML = totalScore.reduce(getSum, 0);
+function finalScore(item) {
+  document.getElementById("#stats").innerHTML = totalScore.reduce(getSum, 0);
 }
 
 // 
@@ -93,9 +87,19 @@ $(".answerA").on("click", function () {
     $(this).remove();
   }) 
 });
- // if ($("#A1").click() === true){
-  //   totalScore =totalScore + 25;
-  //   else {seconds = seconds-1500}
+// --->Question A Evalution code <---
+$("#A1").on("click", function () {
+ addTime()
+  });
+$("#A2").on("click", function () {
+    totalScore = totalScore + 25;
+    //add score here for tthe right answer
+     });
+$("#A3").on("click", function () {
+  console.log('Wrong!!')
+  //subtract score 
+   });
+
 
 $(".answerA").on("click", function () {
   $("#questionBoxTwo").fadeIn(3600, function () {
@@ -107,6 +111,17 @@ $('.answerB').on('click', function () {
     $(this).remove();
   })
 });
+$("#A1").on("click", function () {
+  addTime()
+   });
+ $("#A2").on("click", function () {
+     totalScore = totalScore + 25;
+     //add score here for tthe right answer
+      });
+ $("#A3").on("click", function () {
+   console.log('Wrong!!')
+   //subtract score 
+    });
 
 $(".answerB").on("click", function () {
   $("#questionBoxThree").fadeIn(3600, function () {
@@ -135,6 +150,16 @@ $(".answerD").on("click", function () {
     $("#stats").slideDown(3500, function () {
     })
   });
+
+function addTime(e, seconds){
+  var timeEle = document.querySelector(".time");
+  var timeText = timeEle.innerHTML;
+  var timeArr = timeText.split(":");
+  timeArr[timeText.length - 1] += seconds;
+  //[0,0,0+seconds]
+  var timeStr = timeArr.join(":");
+  timeEle.innerHTML = timeStr;
+}
 
 
 

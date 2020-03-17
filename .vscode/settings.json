@@ -1,3 +1,4 @@
 {
-    "checkpoints.showActiveFileOnly": false
+    "checkpoints.showActiveFileOnly": false,
+    "liveServer.settings.port": 5501
 }
