@@ -28,16 +28,15 @@ $(".startButton").click(function () {
 });
 
 
-// ---Score Code---
-var totalScore = [];
-function getSum(total, num) {
-  return totalScore + Math(num);
-}
+// // ---Score Code---
+// var totalScore = [];
+// totalScore.reduce(function(a,b,totalScore){
+//   return a+b});
+
 function finalScore(item) {
   document.getElementById("#stats").innerHTML = totalScore.reduce(getSum, 0);
 }
 
-// 
 
 // Questions Object
 var Quests = [
@@ -78,12 +77,12 @@ $(".startButton").on("click", function () {
 });
 
 $(".startButton").on("click", function () {
-  $("#questionBoxOne").fadeIn(3600, function () {
+  $("#questionBoxOne").fadeIn(2000, function () {
   })
 });
 
 $(".answerA").on("click", function () {
-  $("#questionBoxOne").fadeOut(2500, function () {
+  $("#questionBoxOne").fadeOut(2000, function () {
     $(this).remove();
   }) 
 });
@@ -102,12 +101,12 @@ $("#A3").on("click", function () {
 
 
 $(".answerA").on("click", function () {
-  $("#questionBoxTwo").fadeIn(3600, function () {
+  $("#questionBoxTwo").fadeIn(2500, function () {
   })
 });
 
 $('.answerB').on('click', function () {
-  $("#questionBoxTwo").fadeOut(2500, function () {
+  $("#questionBoxTwo").fadeOut(2000, function () {
     $(this).remove();
   })
 });
@@ -124,12 +123,12 @@ $("#B1").on("click", function () {
     });
 
 $(".answerB").on("click", function () {
-  $("#questionBoxThree").fadeIn(3600, function () {
+  $("#questionBoxThree").fadeIn(2500, function () {
   })
 });
 
 $('.answerC').on('click', function () {
-  $("#questionBoxThree").fadeOut(2500, function () {
+  $("#questionBoxThree").fadeOut(2000, function () {
     $(this).remove();
   })
 });
@@ -146,12 +145,12 @@ $("#C1").on("click", function () {
     });
 
 $(".answerC").on("click", function () {
-  $("#questionBoxFour").fadeIn(3500, function () {
+  $("#questionBoxFour").fadeIn(2500, function () {
   })
 });
 
 $('.answerD').on('click', function () {
-  $("#questionBoxFour").fadeOut(2500, function () {
+  $("#questionBoxFour").fadeOut(2000, function () {
     $(this).remove();
   })
 });
@@ -159,28 +158,22 @@ $('.answerD').on('click', function () {
 // --->Question D Evalution code <---
 
 $(".answerD").on("click", function () {
-    $("#stats").slideDown(3500, function () {
+    $("#stats").slideDown(2500, function () {
     })
   });
+
 
 function addTime(e, seconds){
   var timeEle = document.querySelector(".time");
   var timeText = timeEle.innerHTML;
   var timeArr = timeText.split(":");
-  timeArr[timeText.length - 1] += seconds;
+  timeArr[timeArr.length - 1] = parseInt(timeArr[timeArr.length -1]) +10;
   //[0,0,0+seconds]
   var timeStr = timeArr.join(":");
   timeEle.innerHTML = timeStr;
 }
 
 
-
-  // console.log(Quests);
-
-
-  // {
-  //   else if ($("#A2").text() === Quest[0].Q1.answersCorrect){
-  //     else($("#A3").text()===Quests[0].Q1.)
 
 
 
