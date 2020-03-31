@@ -32,10 +32,7 @@ $(".startButton").click(function () {
 var scoreArray = [];
 var totalScore =0;
 scoreArray.forEach(function(scoreArray){
-   totalScore += scoreArray
-   return Console.log(totalScore);
-  });
-  
+   totalScore += scoreArray});
 
 
 
@@ -84,8 +81,8 @@ $(".startButton").on("click", function () {
 });
 
 $(".answerA").on("click", function () {
-  $("#questionBoxOne").fadeOut(500, function () {
-    $(this).css(display,"none");
+  $("#questionBoxOne").fadeOut(1000, function () {
+    $(this).remove();
   }) 
 });
 // --->Question A Evalution code <---
@@ -102,13 +99,13 @@ $("#A3").on("click", function () {
 
 
 $(".answerA").on("click", function () {
-  $("#questionBoxTwo").fadeIn(1500, function () {
+  $("#questionBoxTwo").fadeIn(500, function () {
   })
 });
 
 $('.answerB').on('click', function () {
-  $("#questionBoxTwo").fadeOut(500, function () {
-    $(this).css(display,"none");
+  $("#questionBoxTwo").fadeOut(1000, function () {
+    $(this).remove();
   })
 });
 
@@ -124,13 +121,13 @@ $("#B1").on("click", function () {
     });
 
 $(".answerB").on("click", function () {
-  $("#questionBoxThree").fadeIn(1500, function () {
+  $("#questionBoxThree").fadeIn(500, function () {
   })
 });
 
 $('.answerC').on('click', function () {
-  $("#questionBoxThree").fadeOut(500, function () {
-    $(this).css(display,"none");
+  $("#questionBoxThree").fadeOut(1000, function () {
+    $(this).remove();
   })
 });
 
@@ -146,11 +143,16 @@ $("#C1").on("click", function () {
     });
 
 $(".answerC").on("click", function () {
-  $("#questionBoxFour").fadeIn(1500, function () {
+  $("#questionBoxFour").fadeIn(500, function () {
   })
 });
 
-// --->Question D Evalution code <---
+$('.answerD').on('click', function () {
+  $("#questionBoxFour").fadeOut(1000, function () {
+    $(this).remove();
+  })
+});
+
 $("#D1").on("click", function () {
   addTime()
    });
@@ -161,16 +163,10 @@ $("#D1").on("click", function () {
   addTime()
     });
 
-$('.answerD').on('click', function () {
-  $("#questionBoxFour").fadeOut(500, function () {
-    $(this).css(display,"none");
-  })
-});
-
+// --->Question D Evalution code <---
 
 $(".answerD").on("click", function () {
-    $('#totalscore').fadeIn(1500, function () {
-      console.log(totalScore);
+    $(totalScore).slideDown(500, function () {
     })
   });
 

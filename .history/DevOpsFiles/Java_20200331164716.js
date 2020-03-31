@@ -33,7 +33,7 @@ var scoreArray = [];
 var totalScore =0;
 scoreArray.forEach(function(scoreArray){
    totalScore += scoreArray
-   return Console.log(totalScore);
+   return Console.log(totalScore)
   });
   
 
@@ -169,7 +169,7 @@ $('.answerD').on('click', function () {
 
 
 $(".answerD").on("click", function () {
-    $('#totalscore').fadeIn(1500, function () {
+    $(totalScore).fadeIn(1500, function () {
       console.log(totalScore);
     })
   });

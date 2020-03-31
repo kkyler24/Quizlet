@@ -28,16 +28,14 @@ $(".startButton").click(function () {
 });
 
 
-// ---Score Code---
-var scoreArray = [];
-var totalScore =0;
-scoreArray.forEach(function(scoreArray){
-   totalScore += scoreArray
-   return Console.log(totalScore);
-  });
-  
+// // ---Score Code---
+// var totalScore = [];
+// totalScore.reduce(function(a,b,totalScore){
+//   return a+b});
 
-
+function finalScore(item) {
+  document.getElementById("#stats").innerHTML = totalScore.reduce(getSum, 0);
+}
 
 
 // Questions Object
@@ -73,42 +71,43 @@ var Quests = [
 
 // -->Get faded code<--
 $(".startButton").on("click", function () {
-  $("#startB").fadeOut(500, function () {
+  $("#startB").fadeOut(1000, function () {
     $(this).remove();
   })
 });
 
 $(".startButton").on("click", function () {
-  $("#questionBoxOne").fadeIn(1500, function () {
+  $("#questionBoxOne").fadeIn(2000, function () {
   })
 });
 
 $(".answerA").on("click", function () {
-  $("#questionBoxOne").fadeOut(500, function () {
-    $(this).css(display,"none");
+  $("#questionBoxOne").fadeOut(2000, function () {
+    $(this).remove();
   }) 
 });
 // --->Question A Evalution code <---
 $("#A1").on("click", function () {
-  addTime()
+ addTime()
   });
 $("#A2").on("click", function () {
     totalScore = totalScore + 25;
     //add score here for tthe right answer
      });
 $("#A3").on("click", function () {
-  addTime()
+  console.log('Wrong!!')
+  //subtract score 
    });
 
 
 $(".answerA").on("click", function () {
-  $("#questionBoxTwo").fadeIn(1500, function () {
+  $("#questionBoxTwo").fadeIn(2500, function () {
   })
 });
 
 $('.answerB').on('click', function () {
-  $("#questionBoxTwo").fadeOut(500, function () {
-    $(this).css(display,"none");
+  $("#questionBoxTwo").fadeOut(2000, function () {
+    $(this).remove();
   })
 });
 
@@ -124,13 +123,13 @@ $("#B1").on("click", function () {
     });
 
 $(".answerB").on("click", function () {
-  $("#questionBoxThree").fadeIn(1500, function () {
+  $("#questionBoxThree").fadeIn(2500, function () {
   })
 });
 
 $('.answerC').on('click', function () {
-  $("#questionBoxThree").fadeOut(500, function () {
-    $(this).css(display,"none");
+  $("#questionBoxThree").fadeOut(2000, function () {
+    $(this).remove();
   })
 });
 
@@ -146,40 +145,35 @@ $("#C1").on("click", function () {
     });
 
 $(".answerC").on("click", function () {
-  $("#questionBoxFour").fadeIn(1500, function () {
+  $("#questionBoxFour").fadeIn(2500, function () {
+  })
+});
+
+$('.answerD').on('click', function () {
+  $("#questionBoxFour").fadeOut(2000, function () {
+    $(this).remove();
   })
 });
 
 // --->Question D Evalution code <---
-$("#D1").on("click", function () {
-  addTime()
-   });
- $("#D2").on("click", function () {
-  totalScore = totalScore + 25;
-      });
- $("#D3").on("click", function () {
-  addTime()
-    });
-
-$('.answerD').on('click', function () {
-  $("#questionBoxFour").fadeOut(500, function () {
-    $(this).css(display,"none");
-  })
-});
-
 
 $(".answerD").on("click", function () {
-    $('#totalscore').fadeIn(1500, function () {
-      console.log(totalScore);
+    $("#stats").slideDown(2500, function () {
     })
   });
 
 
-function addTime(e, seconds){
-  var timeEle = document.querySelector(".time");
-  var timeText = timeEle.innerHTML;
-  var timeArr = timeText.split(":");
-  timeArr[timeArr.length - 1] = parseInt(timeArr[timeArr.length -1]) +10;
-  //[0,0,0+seconds]
-  var timeStr = timeArr.join(":");
-  timeEle.innerHTML = timeStr;}
+// function addTime(e, seconds){
+//   var timeEle = document.querySelector(".time");
+//   var timeText = timeEle.innerHTML;
+//   var timeArr = timeText.split(":");
+//   timeArr[timeArr.length - 1] = parseInt(timeArr[timeArr.length -1]) +10;
+//   //[0,0,0+seconds]
+//   var timeStr = timeArr.join(":");
+//   timeEle.innerHTML = timeStr;
+}
+
+
+
+
+

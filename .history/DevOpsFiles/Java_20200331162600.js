@@ -32,10 +32,8 @@ $(".startButton").click(function () {
 var scoreArray = [];
 var totalScore =0;
 scoreArray.forEach(function(scoreArray){
-   totalScore += scoreArray
-   return Console.log(totalScore);
-  });
-  
+   totalScore += scoreArray});
+   Console.log(totalScore);
 
 
 
@@ -85,7 +83,7 @@ $(".startButton").on("click", function () {
 
 $(".answerA").on("click", function () {
   $("#questionBoxOne").fadeOut(500, function () {
-    $(this).css(display,"none");
+    $(this).remove();
   }) 
 });
 // --->Question A Evalution code <---
@@ -108,7 +106,7 @@ $(".answerA").on("click", function () {
 
 $('.answerB').on('click', function () {
   $("#questionBoxTwo").fadeOut(500, function () {
-    $(this).css(display,"none");
+    $(this).remove();
   })
 });
 
@@ -130,7 +128,7 @@ $(".answerB").on("click", function () {
 
 $('.answerC').on('click', function () {
   $("#questionBoxThree").fadeOut(500, function () {
-    $(this).css(display,"none");
+    $(this).remove();
   })
 });
 
@@ -163,14 +161,13 @@ $("#D1").on("click", function () {
 
 $('.answerD').on('click', function () {
   $("#questionBoxFour").fadeOut(500, function () {
-    $(this).css(display,"none");
+    $(this).remove();
   })
 });
 
 
 $(".answerD").on("click", function () {
-    $('#totalscore').fadeIn(1500, function () {
-      console.log(totalScore);
+    $(totalScore).slideDown(1500, function () {
     })
   });
 

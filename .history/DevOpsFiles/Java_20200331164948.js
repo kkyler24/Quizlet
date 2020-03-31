@@ -169,7 +169,7 @@ $('.answerD').on('click', function () {
 
 
 $(".answerD").on("click", function () {
-    $('#totalscore').fadeIn(1500, function () {
+    $('#stats').fadeIn(1500, function () {
       console.log(totalScore);
     })
   });
