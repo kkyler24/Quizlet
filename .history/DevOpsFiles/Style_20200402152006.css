@@ -1,22 +1,19 @@
 body{
     margin: auto;
     text-align: center;
-    background-image: url("https://i.pinimg.com/originals/73/16/76/731676aef774bd6c91fac0927d87c428.jpg");
-    background-size: cover;
-    color: whitesmoke;
-    font-family: "Righteous", cursive;
+    background-image: image(https://media2.giphy.com/media/Qgx8fFTysBHYQ/source.gif)
   }
 
 .flex-container {
     display: flex;
-    margin-top: 33%;
+    margin-top: 20%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 30px;
   }
 
 header{
+font-family: "Righteous", cursive;
 font-size: xx-large;
 font-weight: bolder;
 
@@ -58,14 +55,10 @@ font-size: 20PX;
 }
 
 .time{
-  Float: left;
-  margin-left: 5rem;
-  margin-top: 2rem ;
+  margin-top: 20%;
   text-align: center;
   font-family:Arial, Helvetica, sans-serif;
 font-size: 30PX;
-font-weight: bold;
-font-family: "Righteous", cursive;
 }
 
 .startButton{
@@ -81,14 +74,14 @@ font-size: 20PX;
 }
 
 #totalScore {
-  color: rgb(32, 192, 184);
-  font-size: 60px;
-  font-weight: bolder;
+  color: rgb(5, 100, 95);
+  font-size: 40px;
+  font-weight: bold;
 
 }
 
 .score  {
   display: none;
-  font-size: 50px;
-  font-weight: bolder;
+  font-size: medium;
+  font-weight: bold;
 }
