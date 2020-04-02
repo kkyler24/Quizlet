@@ -17,10 +17,14 @@
     <link rel="stylesheet" type="text/css" href="DevOpsFiles/Style.css">
     <title>Quiz it</title>
 </head>
-<header>Lets Play Who's Been Paying Attention in BootCamp?</header>
+
+<header>Who's been paying attention in BootCamp?</header>
+
 <!-- Quiz Design -->
+
 <body>
-    <div class="flex-container">
+    
+    <Div class="flex-container">
         <div id="startB">
             <input type="button" class="startButton" value="Start"/>
         </div>
@@ -40,6 +44,7 @@
                 </div>
             </div>
         </div>
+
         <div id="questionBoxTwo" class="row" style="display: none;">
             <div class="col-md-6 col-sm-3 questionDiv">
                 "Javascript is to muscles as HTML is to...?"
@@ -54,14 +59,19 @@
                     <button id="B3" type="button" class="button">"Skeleton"</button>
                 </div>
             </div>
+        
+
         <div id="questionBoxThree" class="row" style="display: none;">
             <div class="col-md-6 col-sm-3 questionDiv">
                 "What does HTML stand for?"
                 <div class="row">
+
                     <div class="col-8 col-sm-6 answerC">
                         <button id="C1" type="button" class="button">"Home Tools Mark-up language" </button>
+
                         <div class="col-8 col-sm-6 answerC">
                             <button id="C2" type="button" class="button"> "Hyper-text Mark down language "</button>
+
                             <div class="col-8 col-sm-6 answerC correct">
                                 <button id="C3" type="button" class="button">"Hyper-text Mark up language
                                     "</button>
@@ -71,16 +81,20 @@
                 </div>
             </div>
         </div>
+
         <div id="questionBoxFour" class="row" style="display: none;">
             <div class="col-md-6 col-sm-3 questionDiv">
                 "What is BootStrap?"
                 <div class="row">
+
                     <div class="col-8 col-sm-6 answerD">
                         <button id="D1" type="button" class="button">"A piece of material that helps hold
                             up your boot" </button>
+
                         <div class="col-8 col-sm-6 answerD">
                             <button  id="D2"type="button" class="button">"An open source Css
                                 framework"</button>
+
                             <div class="col-8 col-sm-6 answerD">
                                 <button id="D3" type="button" class="button">"An open source Js
                                     framework"</button>
@@ -90,15 +104,9 @@
                 </div>
             </div>
         </div>
-    </div>
-        <div class="score">
-                Your Score is:
-            <div id="totalScore" ></div>
-        </div>
-        <div class="time">
-            <text class="timer"></text>
-        </div>
-
+        <p style="display: none;">Total Score<span id="total"></span></p>
+    </Div>
+   <div class="time"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="DevOpsFiles/Java.js"></script>
