@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!-- Myfiles -->
+    <link rel="stylesheet" type="text/css" href="DevOpsFiles/Style.css">
+    <title>Quiz it</title>
+</head>
+<header>Lets Play Who's Been Paying Attention in BootCamp!</header>
+<!-- Quiz Design -->
+<body>
+    <div class="time">
+        <text class="timer"></text>
+    </div>
+    <div class="flex-container">
+        <div id="startB">
+            <input type="button" class="startButton" value="Start"/>
+        </div>
+        <div id="questionBoxOne" class="row" style="display: none;">
+            <div class="col-md-6 col-sm-3 questionDiv">
+                "What is BootStrap?"
+                <div class="col-8 col-sm-6 answerA">
+                    <button id="A1" type="button" class="button">"A piece of material that helps hold up your
+                        boot"
+                    </button>
+                </div>
+                <div class="col-8 col-sm-6 answerA correct">
+                    <button id="A2" type="button" class="button">"An open source Css framework"</button>
+                </div>
+                <div class="col-8 col-sm-6 answerA">
+                    <button id="A3" type="button" class="button">"An open source Js framework</button>
+                </div>
+            </div>
+        </div>
+        <div id="questionBoxTwo" class="row" style="display: none;">
+            <div class="col-md-6 col-sm-3 questionDiv">
+                "Javascript is to muscles as HTML is to...?"
+            </div>
+                <div class="col-8 col-sm-6 answerB">
+                    <button id="B1" type="button" class="button"> IceCream"</button>
+                </div>
+                <div class="col-8 col-sm-6 answerB">
+                    <button id="B2" type="button" class="button">"Skin"</button>
+                </div>
+                <div class="col-8 col-sm-6 answerB correct">
+                    <button id="B3" type="button" class="button">"Skeleton"</button>
+                </div>
+            </div>
+        <div id="questionBoxThree" class="row" style="display: none;">
+            <div class="col-md-6 col-sm-3 questionDiv">
+                "What does HTML stand for?"
+                <div class="row">
+                    <div class="col-8 col-sm-6 answerC">
+                        <button id="C1" type="button" class="button">"Home Tools Mark-up language" </button>
+                        <div class="col-8 col-sm-6 answerC">
+                            <button id="C2" type="button" class="button"> "Hyper-text Mark down language "</button>
+                            <div class="col-8 col-sm-6 answerC correct">
+                                <button id="C3" type="button" class="button">"Hyper-text Mark up language
+                                    "</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="questionBoxFour" class="row" style="display: none;">
+            <div class="col-md-6 col-sm-3 questionDiv">
+                "What does OOP stand for?"
+                <div class="row">
+                    <div class="col-8 col-sm-6 answerD">
+                        <button id="D1" type="button" class="button">"Other Peoples' Property" </button>
+                        <div class="col-8 col-sm-6 answerD">
+                            <button id="D2" type="button" class="button">"Object Orientated Programming"</button>
+                            <div class="col-8 col-sm-6 answerD">
+                                <button id="D3" type="button" class="button">"Orangutans On the Prowl"</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="score">
+              Your Score is: 
+            <div id="totalScore" ></div>
+        </div>
+       
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="DevOpsFiles/Java.js"></script>
+</body>
+
+</html>
